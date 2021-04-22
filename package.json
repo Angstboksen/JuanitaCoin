@@ -4,6 +4,7 @@
     "description": "A crypto token for the Juanita ecosystem",
     "main": "index.ts",
     "scripts": {
+        "start": "npx neo-one build",
         "test": "jest"
     },
     "repository": {
@@ -20,5 +21,17 @@
     "bugs": {
         "url": "https://github.com/Angstboksen/JuanitaCoin/issues"
     },
-    "homepage": "https://github.com/Angstboksen/JuanitaCoin#readme"
+    "homepage": "https://github.com/Angstboksen/JuanitaCoin#readme",
+    "dependencies": {
+        "@neo-one/cli": "^2.8.0",
+        "@neo-one/client": "^2.7.2",
+        "@neo-one/smart-contract": "^2.7.0",
+        "@neo-one/smart-contract-lib": "^2.7.0",
+        "@neo-one/smart-contract-test": "^2.7.1",
+        "@neo-one/smart-contract-typescript-plugin": "^2.7.0",
+        "@neo-one/suite": "^2.7.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.22"
+    }
 }
