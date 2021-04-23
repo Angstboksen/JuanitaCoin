@@ -1,24 +1,44 @@
 {
-    "name": "juanitacoin",
-    "version": "1.0.0",
-    "description": "A crypto token for the Juanita ecosystem",
-    "main": "index.ts",
-    "scripts": {
-        "test": "jest"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Angstboksen/JuanitaCoin.git"
-    },
-    "keywords": [
-        "crypto",
-        "juanita",
-        "coin"
+  "name": "juanitacoin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@neo-one/suite": "^2.7.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^12.20.10",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
-    "author": "Angstboksen",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Angstboksen/JuanitaCoin/issues"
-    },
-    "homepage": "https://github.com/Angstboksen/JuanitaCoin#readme"
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
