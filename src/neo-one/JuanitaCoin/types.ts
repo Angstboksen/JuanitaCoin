@@ -1,10 +1,9 @@
-/* @hash 9ff5e0b0793e789ad40aec0bcf63ff47 */
+/* @hash eef2a475f314a39df61e2ead22853c2c */
 // tslint:disable
 /* eslint-disable */
 import {
   AddressString,
   Client,
-  Event,
   GetOptions,
   InvocationTransaction,
   InvokeReceipt,
@@ -16,11 +15,7 @@ import {
 } from '@neo-one/client';
 import BigNumber from 'bignumber.js';
 
-export interface JuanitaCoinHelloEventParameters {
-  readonly name: string;
-}
-export interface JuanitaCoinHelloEvent extends Event<'hello', JuanitaCoinHelloEventParameters> {}
-export type JuanitaCoinEvent = JuanitaCoinHelloEvent;
+export type JuanitaCoinEvent = never;
 
 export interface JuanitaCoinSmartContract<TClient extends Client = Client>
   extends SmartContract<TClient, JuanitaCoinEvent> {
@@ -34,15 +29,6 @@ export interface JuanitaCoinSmartContract<TClient extends Client = Client>
       owner?: AddressString,
       options?: TransactionOptions & GetOptions,
     ) => Promise<InvokeReceipt<boolean, JuanitaCoinEvent> & { readonly transaction: InvocationTransaction }>;
-  };
-  readonly hello: {
-    (name: string, options?: TransactionOptions): Promise<
-      TransactionResult<InvokeReceipt<string, JuanitaCoinEvent>, InvocationTransaction>
-    >;
-    readonly confirmed: (
-      name: string,
-      options?: TransactionOptions & GetOptions,
-    ) => Promise<InvokeReceipt<string, JuanitaCoinEvent> & { readonly transaction: InvocationTransaction }>;
   };
   readonly mintTokens: {
     (options?: InvokeReceiveTransactionOptions): Promise<
@@ -84,10 +70,6 @@ export interface JuanitaCoinMigrationSmartContract {
     owner?: AddressString | Promise<AddressString>,
     options?: TransactionOptions & GetOptions,
   ) => Promise<InvokeReceipt<boolean, JuanitaCoinEvent> & { readonly transaction: InvocationTransaction }>;
-  readonly hello: (
-    name: string | Promise<string>,
-    options?: TransactionOptions & GetOptions,
-  ) => Promise<InvokeReceipt<string, JuanitaCoinEvent> & { readonly transaction: InvocationTransaction }>;
   readonly mintTokens: (
     options?: InvokeReceiveTransactionOptions & GetOptions,
   ) => Promise<InvokeReceipt<undefined, JuanitaCoinEvent> & { readonly transaction: InvocationTransaction }>;

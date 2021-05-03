@@ -1,4 +1,4 @@
-/* @hash 4a51afb3f067212a4ce36919bc5dee36 */
+/* @hash 2244bb8c31f8ad1f4bdc11c2343662f7 */
 // tslint:disable
 /* eslint-disable */
 import { Client } from '@neo-one/client';
@@ -9,7 +9,7 @@ import { sourceMaps } from '../sourceMaps';
 const definition = {
   networks: {
     local: {
-      address: 'ANs2GL2T6d2K8qXSrquy5FKaai7DNqJQDq',
+      address: 'AJE7YRyQhX8iHMgWk8miaX3qchzQzhFcXr',
     },
   },
   abi: juanitaCoinABI,

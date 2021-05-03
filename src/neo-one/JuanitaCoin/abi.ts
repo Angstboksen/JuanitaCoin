@@ -1,22 +1,10 @@
-/* @hash 30408094fb58805006d04503d73d88cd */
+/* @hash 163b556a9f2873f8ef08149d4f8e9d9e */
 // tslint:disable
 /* eslint-disable */
 import { ABI } from '@neo-one/client';
 
 export const juanitaCoinABI: ABI = {
-  events: [
-    {
-      name: 'hello',
-      parameters: [
-        {
-          forwardedValue: false,
-          name: 'name',
-          optional: false,
-          type: 'String',
-        },
-      ],
-    },
-  ],
+  events: [],
   functions: [
     {
       constant: true,
@@ -58,27 +46,6 @@ export const juanitaCoinABI: ABI = {
         optional: false,
         type: 'Address',
       },
-    },
-    {
-      claim: false,
-      constant: false,
-      name: 'hello',
-      parameters: [
-        {
-          forwardedValue: false,
-          name: 'name',
-          optional: false,
-          type: 'String',
-        },
-      ],
-      receive: false,
-      returnType: {
-        forwardedValue: false,
-        optional: false,
-        type: 'String',
-      },
-      send: false,
-      sendUnsafe: false,
     },
     {
       constant: true,

@@ -8,10 +8,7 @@ import {
   MapStorage,
   receive,
   SmartContract,
-  createEventNotifier,
 } from "@neo-one/smart-contract";
-
-const hello = createEventNotifier<string>("hello", "name");
 
 export class JuanitaCoin extends SmartContract {
   public readonly name = "JuanitaCoin";
